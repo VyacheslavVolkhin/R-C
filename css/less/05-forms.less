@@ -1,0 +1,129 @@
+/* ----------------------------------- *\
+			forms elements styles
+\* ----------------------------------- */
+.frm-row,
+.frm-field,
+.frm-row-submit {
+    display: flex;
+    flex-wrap: wrap;
+	position: relative;
+	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
+}
+.frm-select, .frm-select-toggle {
+	position: relative;
+	display: block;
+	overflow: hidden;
+    line-height: 1;
+	input {
+		display: block;
+		position: absolute;
+		top: 0;left: 0;
+		width: 0;height: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+		&:after {
+			opacity: 0;
+		}
+	}
+}
+
+
+.frm-select {
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--clr-base);
+	.fp;
+	input {
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		min-height: 20px;
+		padding-left: 30px;
+		&:before, &:after {
+			width: 20px;height: 20px;
+			border-radius: 4px;
+			border: 1px solid var(--clr-border);
+			background-color: #fff;
+		}
+		&:after {
+			border-radius: 0;
+			border: none;
+			background: url(../img/icons/check.svg) center / 24px auto no-repeat;
+			opacity: 0;
+		}
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: var(--clr-att);
+		}
+	}
+}
+.frm-select-toggle {
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--clr-base);
+	.fp;
+	label {
+		padding-left: 55px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		min-height: 24px;
+		&:before {
+			width: 44px;height: 24px;
+			border-radius: 12px;
+			border: 1px solid var(--clr-border);
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -12px;
+		}
+		&:after {
+			width: 20px;height: 20px;
+			top: 50%;left: 2px;
+			margin-top: -10px;
+			border-radius: 50%;
+			background: linear-gradient(115deg, #FEEDB1 16.36%, #E7A92D 100.92%);
+			opacity: 1;
+			transition: all ease 0.2s;
+		}
+	}
+	input {
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+					left: 21px;
+				}
+			}
+		}
+	}
+}
