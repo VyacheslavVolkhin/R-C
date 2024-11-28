@@ -7,7 +7,7 @@
   --clr-att-second: #775E22;
   --clr-light: #707579;
   --clr-border: #FEEDB1;
-  --min: 390px;
+  --min: 375px;
   --max: 1500px;
   --paddingContainer: 20px;
   --filter-dark: brightness(0) grayscale(1);
@@ -347,6 +347,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .wrap {
   padding-top: 56px;
+  padding-bottom: 30px;
 }
 .wrap:has(.panel-menu-box) {
   padding-bottom: 100px;
