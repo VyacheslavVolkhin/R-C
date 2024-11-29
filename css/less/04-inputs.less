@@ -1,6 +1,10 @@
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {color: var(--clr-att);}
+[placeholder]:-moz-placeholder {color: var(--clr-att);}
+[placeholder]::-moz-placeholder {color: var(--clr-att);}
+[placeholder]:-ms-input-placeholder {color: var(--clr-att);}
 .form-input[placeholder] {
     text-overflow: ellipsis;
 }
@@ -15,6 +19,12 @@
 	font-size: 24px;
 	line-height: 1.25;
 	color: var(--clr-att);
+	&:focus {
+		&[placeholder]::-webkit-input-placeholder {color: transparent;}
+		&[placeholder]:-moz-placeholder {color: transparent;}
+		&[placeholder]::-moz-placeholder {color: transparent;}
+		&[placeholder]:-ms-input-placeholder {color: transparent;}
+	}
 }
 textarea.form-input {
 
@@ -327,6 +337,17 @@ select.form-input:required:invalid {
     &.ico-del {
 		&:before {
 			background-image: url(../img/icons/del.svg);
+		}
+    }
+    &.ico-play {
+		&:before {
+			background-image: url(../img/icons/play.svg);
+			background-size: 100% auto;
+		}
+    }
+    &.ico-settings {
+		&:before {
+			background-image: url(../img/icons/settings.svg);
 		}
     }
     &.button-soc {

@@ -1,5 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+
+	//timerFirst
+	const endDateFirst = new Date('2025-02-15T00:00:00').getTime();
+	let timerFirst = document.getElementById("countdown-first");
+	if (timerFirst) {
+		const xFirst = setInterval(function() {
+			const nowFirst = new Date().getTime();
+			const distanceFirst = endDateFirst - nowFirst;
+			const daysFirst = Math.floor(distanceFirst / (1000 * 60 * 60 * 24));
+			const hoursFirst = Math.floor((distanceFirst % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutesFirst = Math.floor((distanceFirst % (1000 * 60 * 60)) / (1000 * 60));
+			const secondsFirst = Math.floor((distanceFirst % (1000 * 60)) / 1000);
+			timerFirst.innerHTML =
+			  '<span class="timer-section"><span class="timer-section-value">' + daysFirst + 
+			  '</span><span class="timer-section-title">д.</span></span>' +  
+			  '<span class="timer-section"><span class="timer-section-value">' + hoursFirst + 
+			  '</span><span class="timer-section-title">ч.</span></span>' +
+			  '<span class="timer-section"><span class="timer-section-value">' + minutesFirst + 
+			  '</span><span class="timer-section-title">мин.</span></span>' + 
+			  '<span class="timer-section"><span class="timer-section-value">' + secondsFirst + 
+			  '</span><span class="timer-section-title">с.</span></span>';
+			if (distanceFirst < 0) {
+				clearInterval(xFirst);
+				timerFirst.innerHTML = "Акция завершилась";
+			}
+		}, 1000);
+	}
+
 	//js tabs
 	const tabsNav = document.querySelectorAll('.js-tabs-nav')
 	const tabsBlocks = document.querySelectorAll('.js-tab-block')
@@ -249,6 +277,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 	
 	});
+
+
+	
 
 
 })
