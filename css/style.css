@@ -2634,7 +2634,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .info-welcome-box .sl-wrap .elm-photo {
   margin: 0 auto;
-  transition: all ease 0.2s;
+  transition: all ease 1s;
 }
 .info-welcome-box .sl-wrap .items-wrap {
   margin: 45px -10px 0 -10px;
@@ -3008,6 +3008,9 @@ select.form-input:required:invalid {
 }
 .btn {
   padding: 0 30px;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.99);
 }
 .btn.button-att-second,
 .btn.button-att,

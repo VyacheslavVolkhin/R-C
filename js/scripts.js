@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: false,
-		speed: 400,
+		speed: 1000,
 		pagination: false,
 		autoplay: false,
 		navigation: false,
