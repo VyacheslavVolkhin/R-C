@@ -1,6 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
+
+	//circe chart
+	let elements = document.querySelectorAll('.circle-chart');
+	elements.forEach(function(el) {
+		const colour = el.getAttribute('data-colour') || '#9691FF'; // Значение по умолчанию
+		const bgcolour = el.getAttribute('data-trackColour') || '#fff'; // Значение по умолчанию
+		const stroke = el.getAttribute('data-stroke') || 14; // Значение по умолчанию
+		new CircleChart(el, {
+			stroke: stroke, // Фиксированное значение
+			maxVal: 100, // Фиксированное значение
+			colour: colour, // Задается из data-colour
+			animationSpeed: 1000, // Фиксированное значение
+			edgeWidth: 0,
+			edgeGap: undefined,
+			edgeColour: '#fff',
+			trackColour: bgcolour,
+			edgeClass: 'edge',
+			trackClass: 'track',
+			pathClass: 'path',
+			pathEasing: 'ease-in-out'
+		});
+	});
+
+
+
+	
+
 	//timerFirst
 	const endDateFirst = new Date('2025-02-15T00:00:00').getTime();
 	let timerFirst = document.getElementById("countdown-first");
@@ -235,8 +262,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//slider items
 	const swiperSliderItems = new Swiper('.slider-items .swiper', {
-		loop: false,
-		slidesPerView: 1,
+		loop: true,
+		slidesPerView: 3,
 		spaceBetween: 0,
 		autoHeight: false,
 		speed: 1000,
