@@ -7,7 +7,7 @@
   --clr-att-second: #775E22;
   --clr-light: #707579;
   --clr-border: #FEEDB1;
-  --min: 375px;
+  --min: 320px;
   --max: 1500px;
   --paddingContainer: 20px;
   --filter-dark: brightness(0) grayscale(1);
