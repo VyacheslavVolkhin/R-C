@@ -380,6 +380,16 @@
 .app-box {
 	display: block;
 	position: relative;
+	.bg-page-box {
+		width: 2000px;height: 2000px;
+		position: absolute;
+		top: 50%;left: 50%;
+		transform: translate(-50%, -50%);
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
 	.sl-wrap:has(.elm-photo-select.type-second):not(.swiper-slide-active) .elm-photo-select {
 		transform: scale(.7) translate(30%,-10%);
 	}
@@ -407,6 +417,10 @@
 		position: relative;
 		max-width: 350px;
 		margin-top: -50px;
+		canvas {
+			display: block;
+			position: relative;
+		}
 		.elm-widget {
 			width: 65px;
 			position: absolute;

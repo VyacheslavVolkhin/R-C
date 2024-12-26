@@ -1683,6 +1683,12 @@ html.with-fancybox body.hide-scrollbar {
   border-radius: 50%;
   box-shadow: 0px -44.706px 12.294px 0px rgba(0, 0, 0, 0), 0px -29.059px 11.176px 0px rgba(0, 0, 0, 0.01), 0px -15.647px 10.059px 0px rgba(0, 0, 0, 0.05), 0px -6.706px 6.706px 0px rgba(0, 0, 0, 0.09), 0px -2.235px 4.471px 0px rgba(0, 0, 0, 0.1);
 }
+.elm-photo-select .circles {
+  margin-left: -5px;
+}
+.elm-photo-select .circles .elm-photo {
+  margin-left: 10px;
+}
 .item-tile-total {
   display: block;
   position: relative;
@@ -2191,6 +2197,100 @@ html.with-fancybox body.hide-scrollbar {
 .circle-chart svg {
   left: 0 !important;
 }
+/* circe add */
+.circle-multiple .elm-photo {
+  aspect-ratio: 1;
+  width: 100%;
+}
+.circle-multiple .circle {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+.circles {
+  width: 100%;
+  aspect-ratio: 1;
+  transform: translateZ(0);
+}
+.circles .circle-multiple {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+}
+.circle-multiple .circle:nth-of-type(1) {
+  animation: psycho 16s linear infinite;
+}
+.circle-multiple .circle:nth-of-type(2) {
+  animation: psycho-reverse 10s linear 0.1s infinite;
+}
+.circle-multiple .circle:nth-of-type(3) {
+  animation: psycho-reverse 24s linear 0.1s infinite;
+}
+.circle-multiple .circle:nth-of-type(4) {
+  animation: psycho-reverse 15s linear 0.1s infinite;
+}
+.circle-multiple .circle:nth-of-type(5) {
+  animation: psycho-dots 10s linear 0.25s infinite;
+}
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes psycho {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(160deg) scale(1) translate(5px, 5px);
+  }
+  66% {
+    transform: rotate(242deg) scale(1) translate(-5px, -5px);
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translate(0, 0);
+  }
+}
+@keyframes psycho-reverse {
+  0% {
+    transform: rotate(360deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(242deg) scale(1) translate(-5px, -5px);
+  }
+  66% {
+    transform: rotate(160deg) scale(1) translate(5px, 5px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+}
+@keyframes psycho-dots {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  33% {
+    transform: rotate(20deg) scale(1) translate(-5px, -5px);
+  }
+  66% {
+    transform: rotate(16deg) scale(1) translate(5px, 5px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+}
+/* end circe add */
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
@@ -2595,6 +2695,18 @@ html.with-fancybox body.hide-scrollbar {
   display: block;
   position: relative;
 }
+.app-box .bg-page-box {
+  width: 2000px;
+  height: 2000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-box .bg-page-box img {
+  display: block;
+  width: 100%;
+}
 .app-box .sl-wrap:has(.elm-photo-select.type-second):not(.swiper-slide-active) .elm-photo-select {
   transform: scale(0.7) translate(30%, -10%);
 }
@@ -2622,6 +2734,10 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   max-width: 350px;
   margin-top: -50px;
+}
+.app-box .photo-inner-wrap canvas {
+  display: block;
+  position: relative;
 }
 .app-box .photo-inner-wrap .elm-widget {
   width: 65px;

@@ -893,6 +893,12 @@
 		border-radius: 50%;
 		box-shadow: 0px -44.706px 12.294px 0px rgba(0, 0, 0, 0.00), 0px -29.059px 11.176px 0px rgba(0, 0, 0, 0.01), 0px -15.647px 10.059px 0px rgba(0, 0, 0, 0.05), 0px -6.706px 6.706px 0px rgba(0, 0, 0, 0.09), 0px -2.235px 4.471px 0px rgba(0, 0, 0, 0.10);
 	}
+	.circles {
+		margin-left: -5px;
+		.elm-photo {
+			margin-left: 10px;
+		}
+	}
 }
 .item-tile-total {
 	display: block;
@@ -1321,3 +1327,127 @@
 		left: 0 !important;
 	}
 }
+
+
+/* circe add */
+.circle-multiple {
+	.elm-photo {
+		aspect-ratio: 1;
+		width: 100%;
+	}
+}
+.circle-multiple .circle {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: auto;
+}
+.circles>* {
+	//margin: 0 2%;
+}
+
+.circles {
+	width: 100%;
+	aspect-ratio: 1;
+	transform: translateZ(0);
+	.circle-multiple {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		aspect-ratio: 1;
+	}
+	svg {
+		
+	}
+}
+.circle-multiple .circle:nth-of-type(1) {
+	animation: psycho 16s linear infinite;
+}
+
+.circle-multiple .circle:nth-of-type(2) {
+	animation: psycho-reverse 10s linear 0.1s infinite;
+}
+
+.circle-multiple .circle:nth-of-type(3) {
+	animation: psycho-reverse 24s linear 0.1s infinite;
+}
+
+.circle-multiple .circle:nth-of-type(4) {
+
+	animation: psycho-reverse 15s linear 0.1s infinite;
+}
+
+.circle-multiple .circle:nth-of-type(5) {
+	animation: psycho-dots 10s linear 0.25s infinite;
+}
+
+@keyframes rotateThis {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+
+	to {
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+@keyframes psycho {
+	0% {
+		transform: rotate(0deg) scale(1) translate(0, 0);
+	}
+
+	33% {
+		transform: rotate(160deg) scale(1) translate(5px, 5px);
+	}
+
+	66% {
+		transform: rotate(242deg) scale(1) translate(-5px, -5px);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(1) translate(0, 0);
+	}
+}
+
+@keyframes psycho-reverse {
+	0% {
+		transform: rotate(360deg) scale(1) translate(0, 0);
+	}
+
+	33% {
+		transform: rotate(242deg) scale(1) translate(-5px, -5px);
+	}
+
+	66% {
+		transform: rotate(160deg) scale(1) translate(5px, 5px);
+	}
+
+	100% {
+		transform: rotate(0deg) scale(1) translate(0, 0);
+	}
+}
+
+@keyframes psycho-dots {
+	0% {
+		transform: rotate(0deg) scale(1) translate(0, 0);
+	}
+
+	33% {
+		transform: rotate(20deg) scale(1) translate(-5px, -5px);
+	}
+
+	66% {
+		transform: rotate(16deg) scale(1) translate(5px, 5px);
+	}
+
+	100% {
+		transform: rotate(0deg) scale(1) translate(0, 0);
+	}
+}
+
+
+
+/* end circe add */
