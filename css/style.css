@@ -2932,9 +2932,6 @@ html.with-fancybox body.hide-scrollbar {
   -ms-flex: 1;
       flex: 1;
 }
-.app-box .slider-outer-wrap + .title-inner-wrap {
-  padding-top: 10px;
-}
 .app-box .top-panel-wrap {
   -ms-flex: 1;
       flex: 1;
@@ -2942,6 +2939,9 @@ html.with-fancybox body.hide-scrollbar {
 }
 .app-box .photo-inner-wrap {
   width: 100%;
+}
+.app-box .elm-photo-select {
+  aspect-ratio: 1;
 }
 .info-welcome-box {
   display: block;
