@@ -2932,6 +2932,9 @@ html.with-fancybox body.hide-scrollbar {
   -ms-flex: 1;
       flex: 1;
 }
+.app-box .slider-outer-wrap + .title-inner-wrap {
+  padding-top: 50px;
+}
 .app-box .top-panel-wrap {
   -ms-flex: 1;
       flex: 1;
