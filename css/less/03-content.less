@@ -380,6 +380,13 @@
 .app-box {
 	display: block;
 	position: relative;
+	.top-panel-wrap {
+		flex: 1;
+		width: 100%;
+	}
+	.photo-inner-wrap {
+		width: 100%;
+	}
 	.bg-page-box {
 		width: 2000px;height: 2000px;
 		position: absolute;
@@ -605,6 +612,27 @@
 		&.swiper-slide-active {
 			z-index: 5;
 		}
+	}
+}
+
+.page-full {
+	&:has(.app-box) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.app-box {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
+	flex: 1;
+	.top-panel-wrap {
+		flex: 1;
+		width: 100%;
+	}
+	.photo-inner-wrap {
+		width: 100%;
 	}
 }
 .info-welcome-box {
