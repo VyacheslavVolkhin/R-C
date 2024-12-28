@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//slider eat
 	const swiperSliderEat = new Swiper('.slider-eat .swiper', {
-		loop: false,
+		loop: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: false,
