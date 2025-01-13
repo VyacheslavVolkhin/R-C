@@ -241,8 +241,14 @@
 	width: 20px; /* Width of the image */
 	height: 20px; /* Height of the image */
 	overflow: hidden;
+	&.img-energy {
+		img, svg {
+			height: 100%;
+			width: auto;
+			max-width: inherit;
+		}
+	}
 }
-
 .image-sequence img {
 	position: absolute !important;
 	top: 0;

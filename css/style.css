@@ -4414,6 +4414,12 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   /* Height of the image */
   overflow: hidden;
 }
+.image-sequence.img-energy img,
+.image-sequence.img-energy svg {
+  height: 100%;
+  width: auto;
+  max-width: inherit;
+}
 .image-sequence img {
   position: absolute !important;
   top: 0;
