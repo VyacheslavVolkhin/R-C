@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/buble.js" defer></script>
+    <script src="./js/zzz.js" defer></script>
+    <script src="./js/openbox.js" defer></script>
     <script src="./js/raphael-min.js" defer></script>
     <script src="./js/circle-chart.js" defer></script>
     <script src="./js/scripts.js" defer></script>
@@ -179,10 +182,13 @@
                             <div class="item-wrap">
                                 <div class="item-tile-gift-day">
                                     <div class="tile-photo-wrap">
-                                        <div class="tile-gift">
-                                            <div class="gift-active">
-                                                <img src="./img/icons/gift-open.svg" alt="">
+                                        <div class="tile-gift-animation">
+                                            <img src="./img/box.png" alt="Click Me" class="clickable-image" onclick="startEffect()">
+                                            <div id="popupBox">
+                                                <img src="./img/openbox.png" alt="Openbox" id="popupBox-img">
+                                                <div>text</div>
                                             </div>
+                                            <div id="containerBox"></div>
                                         </div>
                                     </div>
                                     <div class="tile-info-wrap">

@@ -72,7 +72,223 @@
 		animation: pulse 1s infinite;
 	}
 }
+.bubble-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+.bubble {
+	position: absolute;
+	background: url('../img/bubble.png') no-repeat center;
+	background-size: contain;
+	border-radius: 50%;
+	animation: floatUp var(--float-duration) linear;
+}
+.blurred {
+	filter: blur(4px);
+}
 
+.zzz-container {
+	display: block;
+	width: 40px;height: 40px;
+	position: absolute;
+	top: 0;right: 20px;
+	z-index: 100;
+	pointer-events: none;
+	.zzz {
+		position: absolute;
+		color: #555;
+		font-size: 10px;
+		font-weight: bold;
+		opacity: 0;
+		animation: floatZ 3s ease-in-out forwards;
+		margin-left: -100px;
+		margin-top: -60px;
+	}
+}
+
+
+
+.clickable-image {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+#popupBox {
+	width: 333px;height: 317px;
+	max-width: 90dvw;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background-color: #1C1A29;
+	border: 3px solid #F3CB70;
+	border-radius: 16px;
+	text-align: center;
+	padding: 40px;
+	color: #F3CB70;
+	font-size: 20px;
+	z-index: 9;
+	opacity: 0;
+	transition: transform 0.2s ease, opacity 0.2s ease; /* Время появления попап окна */
+}
+
+#popupBox img {
+	width: 80%;
+	max-width: 100px;
+	margin: 0 auto;
+	transition: opacity 1s ease;
+}
+
+#containerBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 15;
+}
+
+.particle {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	border-radius: 50%;
+	pointer-events: none;
+	animation: particle-move 2s ease-out forwards, fade-out 2s linear forwards; /* время жизни частиц салюта */
+}
+
+.spark-image {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-size: cover;
+	filter: blur(2px);
+	pointer-events: none;
+	animation: particle-move 2s ease-out forwards, fade-out 2s linear forwards;
+}
+
+.circle-effect {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: radial-gradient(circle, #F3CB70 0%, transparent 100%);
+	animation: circle-grow 3s forwards; /* Увеличено время анимации до 3 секунд */
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+}
+.item-wrap {
+	&:has(.item-tile-gift-day) {
+		&:has(.tile-gift-animation) {
+			position: static;
+		}
+	}
+}
+.item-tile-gift-day {
+	position: static;
+	&:has(.tile-gift-animation) {
+		.tile-photo-wrap {
+			position: static;
+		}
+	}
+	.tile-gift-animation {
+		width: 85px;height: 96px;
+		margin: 0 auto;
+		position: static;
+		z-index: 7;
+		&>img {
+			display: block;
+			width: 100%;
+			position: relative;
+			z-index: 7;
+		}
+	}
+}
+.timer-box {
+	.timer-inner-wrap {
+		min-height: 30px;
+	}
+}
+@keyframes circle-grow {
+	0% {
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		width: 600px; /* Максимальный размер круга теперь 600px */
+		height: 600px; /* Максимальный размер круга теперь 600px */
+		opacity: 0;
+	}
+}
+
+@keyframes particle-move {
+	to {
+		transform: translate(calc(var(--dx) * 600px), calc(var(--dy) * 600px)) scale(var(--scale)) rotate(var(--angle));
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes zoom-out {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(2);
+		opacity: 0;
+	}
+}
+@keyframes floatZ {
+	0% {
+		transform: scale(0.5) translateY(20px);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(2) translateY(-50px);
+		opacity: 0;
+	}
+}
+@keyframes floatUp {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes pop {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+}
 @keyframes pulse {
 	0%, 100% {
 		opacity: 1;
