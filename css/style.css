@@ -4252,7 +4252,7 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   right: 0 !important;
   margin: auto !important;
   object-fit: cover !important;
-  animation: pulse 1s infinite !important;
+  animation: pulse 1s infinite;
 }
 @keyframes pulse {
   0%,
