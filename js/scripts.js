@@ -306,6 +306,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//slider splash
+	const swiperSliderSplash = new Swiper('.slider-splash .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 400,
+		pagination: {
+			el: '.slider-splash-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		navigation: false,
+		breakpoints: {
+		},
+	
+	});
+
+
 	
 
 

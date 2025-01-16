@@ -213,6 +213,42 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 	top: auto;
 	bottom: auto;
 }
+.slider-pagination-animate {
+	.slider-pagination {
+		display: flex;
+		.swiper-pagination-bullet {
+			width: auto;
+			height: 6px;
+			border-radius: 3px;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+			margin: 0 2px;
+			flex: 1;
+			border: none;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+			&:before {
+				content: "";
+				opacity: 0;
+				display: block;
+				position: absolute;
+				top: 0;bottom: 0;left: 0;
+				width: 0;
+				background: linear-gradient(258deg, #FEEDB1 -103.99%, #E7A92D 197.73%);
+				transition: width ease 5s;
+			}
+		}
+	}
+	.slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .slider-pagination .swiper-pagination-bullet:hover {
+		background: #fff;
+	}
+	.slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+		&:before {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+}
 .slider-pagination {
 	display: flex;
 	flex-wrap: wrap;
