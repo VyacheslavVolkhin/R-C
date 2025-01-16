@@ -3318,6 +3318,9 @@ body.popup-open {
   .info-welcome-box .photo-inner-wrap .elm-photo {
     max-width: 300px;
   }
+  .app-box:has(.title-inner-wrap+.slider-outer-wrap) .top-panel-wrap {
+    margin-bottom: -50px;
+  }
   .app-box .title-inner-wrap:last-child {
     padding-bottom: 0;
   }
@@ -3338,6 +3341,11 @@ body.popup-open {
   }
   .wrap:has(.panel-profile-box):has(.panel-menu-box) .app-box .photo-inner-wrap {
     max-width: 240px;
+  }
+}
+@media (max-height: 749px) {
+  .app-box:has(.title-inner-wrap+.slider-outer-wrap) .top-panel-wrap {
+    margin-bottom: -100px;
   }
 }
 @media (max-height: 699px) {

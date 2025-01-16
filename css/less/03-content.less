@@ -1018,6 +1018,11 @@ body.popup-open {
 		}
 	}
 	.app-box {
+		&:has(.title-inner-wrap+.slider-outer-wrap) {
+			.top-panel-wrap {
+				margin-bottom: -50px;
+			}
+		}
 		.title-inner-wrap {
 			&:last-child {
 				padding-bottom: 0;
@@ -1059,6 +1064,13 @@ body.popup-open {
 
 }
 @media (max-height: 749px) {
+	.app-box {
+		&:has(.title-inner-wrap+.slider-outer-wrap) {
+			.top-panel-wrap {
+				margin-bottom: -100px;
+			}
+		}
+	}
 	.wrap {
 		&:has(.panel-profile-box) {
 			&:has(.panel-menu-box)	 {
