@@ -2933,15 +2933,21 @@ html.with-fancybox body.hide-scrollbar {
       flex: 1;
 }
 .app-box .slider-outer-wrap + .title-inner-wrap {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .app-box .top-panel-wrap {
   -ms-flex: 1;
       flex: 1;
   width: 100%;
 }
-.app-box .photo-inner-wrap {
-  width: 100%;
+.app-box .photo-inner-wrap + .title-inner-wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -30px;
+  min-height: 45px;
+}
+.app-box .photo-inner-wrap + .title-inner-wrap + .slider-outer-wrap {
+  margin-top: 0;
 }
 .app-box .elm-photo-select {
   aspect-ratio: 1;
@@ -4193,6 +4199,25 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 /* ----------------------------------- *\
 			icons
 \* ----------------------------------- */
+/* other edits */
+.btn-action-ico.button-sticker-soon {
+  overflow: visible;
+}
+.btn-action-ico.button-sticker-soon:after {
+  width: 54px;
+  height: 54px;
+  max-width: inherit;
+  max-height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-55%, -45%);
+  background: url(../img/icons/st-soon.svg) center no-repeat;
+  background-size: 100% auto;
+}
+/* end other edits */
 /* animation styles */
 .item-tile-card .item-tile-total.tile-row .tile-ico .pulse-container {
   width: 24px;

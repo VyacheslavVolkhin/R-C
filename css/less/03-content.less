@@ -628,14 +628,22 @@
 	width: 100%;
 	flex: 1;
 	.slider-outer-wrap+.title-inner-wrap {
-		padding-top: 50px;
+		padding-top: 20px;
 	}
 	.top-panel-wrap {
 		flex: 1;
 		width: 100%;
 	}
 	.photo-inner-wrap {
-		width: 100%;
+		&+.title-inner-wrap {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-top: -30px;
+			min-height: 45px;
+			&+.slider-outer-wrap {
+				margin-top: 0;
+			}
+		}
 	}
 	.elm-photo-select {
 		aspect-ratio: 1;
