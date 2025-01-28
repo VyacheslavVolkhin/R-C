@@ -3145,7 +3145,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .slider-splash-box .sl-wrap {
   padding: 0;
-  max-height: calc(100dvh - 50px);
+  max-height: calc(100dvh - 15px);
 }
 .slider-splash-box .elm-photo {
   aspect-ratio: 390/776;
@@ -3190,6 +3190,9 @@ body.popup-open {
 .popup-outer-box.active {
   display: -ms-flexbox;
   display: flex;
+}
+.popup-outer-box:has(.slider-splash-box) {
+  padding-top: 15px;
 }
 .popup-box {
   display: -ms-flexbox;

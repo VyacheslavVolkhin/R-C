@@ -838,7 +838,7 @@
 	}
 	.sl-wrap {
 		padding: 0;
-		max-height: calc(100dvh - 50px);
+		max-height: calc(100dvh - 15px);
 	}
 	.elm-photo {
 		aspect-ratio: 390/776;
@@ -879,6 +879,9 @@ body.popup-open {
 	right: 0;
 	&.active {
 		display: flex;
+	}
+	&:has(.slider-splash-box) {
+		padding-top: 15px;
 	}
 }
 .popup-box {
