@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			clickable: true,
 		},
 		autoplay: {
-			delay: 5000,
+			delay: 50000,
 			disableOnInteraction: false,
 		},
 		navigation: false,
